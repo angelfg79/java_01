@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Workshop Nº1</title>
+    </head>
+  <body>
+    <form name="miFrom">
+      Ingrese Tarea: 
+      <br>
+    	<input type="text" id="id_tarea">
+      <br>
+      <input type="button" value="Guardar Tarea" onclick="guardarTarea();">
+      </form>
+    <br>
+    <div id="resultado">
+    <span>Lista de Tareas:</span>
+    <ul id="lista_tareas">
+      
+    </ul>
+    <br>
+    </div>
+    <div id="botones">
+   <!--  <button id="mostrar_Lista" onclick="refrescar_tareas();">Listar Tareas</button> -->
+    <button id="limpiar_Lista" onclick="limpiarTareas();">Limpiar Tareas</button>
+    </div>
+    <script src="index.js"></script>    
+  </body>
+</html>
