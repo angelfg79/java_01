@@ -6,9 +6,21 @@
     </head>
   <body>
     <form name="miFrom">
+      Ingrese Fecha: 
+      <br>
+    	<input type="date" id="id_fechaTarea" step="1"> 
+      <br>
       Ingrese Tarea: 
       <br>
-    	<input type="text" id="id_tarea">
+      <input type="text" id="id_tarea">
+      <br>
+      Estado: 
+      <br>
+      <select id="id_combo">
+        <option value="Cerrada">Cerrada</option>
+        <option value="Iniciada">Iniciada</option>
+        <option value="Pendiente" selected>Pendiente</option>
+      </select>      
       <br>
       <input type="button" value="Guardar Tarea" onclick="guardarTarea();">
       </form>
@@ -20,10 +32,20 @@
     </ul>
     <br>
     </div>
+    <div id="filtro">
+      <select id="id_combo_filtro">
+        <option value="Cerrada">Cerrada</option>
+        <option value="Iniciada">Iniciada</option>
+        <option value="Pendiente" selected>Pendiente</option>
+      </select>
+      <button id="filtrar_Lista_Estado" onclick="filtrar_Estado();">Filtrar por Estado</button>
+      <br>
+      <button id="quitar_filtro_Estado" onclick="quitar_filtro();">Quitar Filtro</button>      
+    </div>
     <div id="botones">
    <!--  <button id="mostrar_Lista" onclick="refrescar_tareas();">Listar Tareas</button> -->
     <button id="limpiar_Lista" onclick="limpiarTareas();">Limpiar Tareas</button>
     </div>
-    <script src="index.js"></script>    
+    <script src="index.js"></script> 
   </body>
 </html>
